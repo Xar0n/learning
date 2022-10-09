@@ -1,0 +1,15 @@
+.truncated-text {
+  color: #0079c1;
+  width: 12rem;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  word-break: break-all;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.truncated-text:hover {
+  overflow: visible;
+  white-space: normal;
+  width: auto;
+}
