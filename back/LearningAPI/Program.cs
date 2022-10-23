@@ -1,4 +1,7 @@
+using DAL.Data;
 using LearningAPI.Hubs;
+using Microsoft.AspNetCore.Http.Features;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +12,19 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSignalR();
+
+builder.Services.Configure<IISServerOptions>(options =>
+{
+    options.MaxRequestBodySize = int.MaxValue;
+});
+
+/*builder.Services.Configure<FormOptions>(x =>
+{
+    x.ValueLengthLimit = int.MaxValue;
+    x.MultipartBodyLengthLimit = int.MaxValue; // if don't set default value is: 128 MB
+    x.MultipartHeadersLengthLimit = int.MaxValue;
+});
+*/
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("ClientPermission", policy =>
@@ -19,6 +35,14 @@ builder.Services.AddCors(options =>
             .AllowCredentials();
     });
 });
+
+var sqlConnectionString = builder.Configuration.GetConnectionString("Local");
+builder.Services.AddDbContext<LearningContext>(options =>
+                options.UseSqlServer(
+                    sqlConnectionString
+                )
+            );
+
 
 var app = builder.Build();
 
