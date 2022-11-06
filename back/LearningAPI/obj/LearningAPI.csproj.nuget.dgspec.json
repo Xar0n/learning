@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\эльдо\\source\\repos\\LearningAPI\\LearningAPI\\LearningAPI.csproj": {}
+    "D:\\Projects\\C#\\LearningAPI\\LearningAPI\\LearningAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\эльдо\\source\\repos\\LearningAPI\\DAL\\DAL.csproj": {
+    "D:\\Projects\\C#\\LearningAPI\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\эльдо\\source\\repos\\LearningAPI\\DAL\\DAL.csproj",
-        "projectName": "DAL",
-        "projectPath": "C:\\Users\\эльдо\\source\\repos\\LearningAPI\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\Projects\\C#\\LearningAPI\\Core\\Core.csproj",
+        "projectName": "Core",
+        "projectPath": "D:\\Projects\\C#\\LearningAPI\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\эльдо\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\эльдо\\source\\repos\\LearningAPI\\DAL\\obj\\",
+        "outputPath": "D:\\Projects\\C#\\LearningAPI\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\эльдо\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,10 +39,84 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\C#\\LearningAPI\\DAL\\DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\C#\\LearningAPI\\DAL\\DAL.csproj",
+        "projectName": "DAL",
+        "projectPath": "D:\\Projects\\C#\\LearningAPI\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\эльдо\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\C#\\LearningAPI\\DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\эльдо\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Projects\\C#\\LearningAPI\\Core\\Core.csproj": {
+                "projectPath": "D:\\Projects\\C#\\LearningAPI\\Core\\Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
-            "EntityFramework": {
+            "Bogus": {
               "target": "Package",
-              "version": "[6.4.4, )"
+              "version": "[34.0.2, )"
+            },
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "MassTransit.AspNetCore": {
+              "target": "Package",
+              "version": "[7.3.1, )"
+            },
+            "MassTransit.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "MassTransit.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.3.1, )"
             },
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
@@ -100,14 +174,14 @@
         }
       }
     },
-    "C:\\Users\\эльдо\\source\\repos\\LearningAPI\\LearningAPI\\LearningAPI.csproj": {
+    "D:\\Projects\\C#\\LearningAPI\\LearningAPI\\LearningAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\эльдо\\source\\repos\\LearningAPI\\LearningAPI\\LearningAPI.csproj",
+        "projectUniqueName": "D:\\Projects\\C#\\LearningAPI\\LearningAPI\\LearningAPI.csproj",
         "projectName": "LearningAPI",
-        "projectPath": "C:\\Users\\эльдо\\source\\repos\\LearningAPI\\LearningAPI\\LearningAPI.csproj",
+        "projectPath": "D:\\Projects\\C#\\LearningAPI\\LearningAPI\\LearningAPI.csproj",
         "packagesPath": "C:\\Users\\эльдо\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\эльдо\\source\\repos\\LearningAPI\\LearningAPI\\obj\\",
+        "outputPath": "D:\\Projects\\C#\\LearningAPI\\LearningAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\эльдо\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -124,8 +198,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\эльдо\\source\\repos\\LearningAPI\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\эльдо\\source\\repos\\LearningAPI\\DAL\\DAL.csproj"
+              "D:\\Projects\\C#\\LearningAPI\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\Projects\\C#\\LearningAPI\\DAL\\DAL.csproj"
               }
             }
           }
@@ -140,21 +214,25 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "EntityFramework": {
-              "target": "Package",
-              "version": "[6.4.4, )"
-            },
             "MassTransit": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.7, )"
             },
             "MassTransit.AspNetCore": {
               "target": "Package",
               "version": "[7.3.1, )"
             },
+            "MassTransit.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
             "MassTransit.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[7.3.1, )"
+            },
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.0.7, )"
             },
             "Microsoft.AspNet.SignalR": {
               "target": "Package",
@@ -166,11 +244,15 @@
             },
             "Microsoft.AspNetCore.SignalR.Common": {
               "target": "Package",
-              "version": "[6.0.9, )"
+              "version": "[6.0.10, )"
             },
             "Microsoft.AspNetCore.SignalR.Protocols.Json": {
               "target": "Package",
-              "version": "[6.0.9, )"
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -178,9 +260,13 @@
               "target": "Package",
               "version": "[6.0.10, )"
             },
+            "Stateless": {
+              "target": "Package",
+              "version": "[5.12.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.4.0, )"
             }
           },
           "imports": [

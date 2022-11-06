@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Core.Enums;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -21,6 +22,8 @@ namespace DAL.Models
         public int? PhotoId { get; set; }
 
         [ForeignKey(nameof(PhotoId))]
-        public FileDescription Photo { get; set; }
+        public FileDescription? Photo { get; set; }
+
+        public State State { get; set; }
     }
 }

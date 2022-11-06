@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\эльдо\\source\\repos\\LearningAPI\\Core\\Core.csproj",
+      "projectUniqueName": "D:\\Projects\\C#\\LearningAPI\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "C:\\Users\\эльдо\\source\\repos\\LearningAPI\\Core\\Core.csproj",
+      "projectPath": "D:\\Projects\\C#\\LearningAPI\\Core\\Core.csproj",
       "packagesPath": "C:\\Users\\эльдо\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\эльдо\\source\\repos\\LearningAPI\\Core\\obj\\",
+      "outputPath": "D:\\Projects\\C#\\LearningAPI\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\эльдо\\AppData\\Roaming\\NuGet\\NuGet.Config",

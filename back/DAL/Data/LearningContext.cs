@@ -1,4 +1,5 @@
-﻿using DAL.Models;
+﻿using DAL.Fakers;
+using DAL.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -19,9 +20,12 @@ namespace DAL.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<Offer>().HasOne(p => p.Photo).WithOne(o => o.Offer).IsRequired();
-            builder.Entity<Offer>().Navigation(p => p.Photo).AutoInclude();
-            builder.Entity<FileDescription>().HasOne(o => o.Offer).WithOne(p => p.Photo).IsRequired();
+            builder.Entity<Offer>().HasOne(p => p.Photo).WithOne(o => o.Offer);
+            // builder.Entity<Offer>().Navigation(p => p.Photo).AutoInclude();
+            // builder.Entity<FileDescription>().HasOne(o => o.Offer).WithOne(p => p.Photo).IsRequired();
+
+            OfferFaker offerFaker = new OfferFaker();
+            builder.Entity<Offer>().HasData(offerFaker.Generate(500));
             base.OnModelCreating(builder);
         }
     }

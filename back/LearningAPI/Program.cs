@@ -2,6 +2,10 @@ using DAL.Data;
 using LearningAPI.Hubs;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
+using MassTransit;
+using Microsoft.Extensions.DependencyInjection;
+using DAL.StateMachines;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -43,6 +47,24 @@ builder.Services.AddDbContext<LearningContext>(options =>
                 )
             );
 
+builder.Services.AddMassTransit(x =>
+{
+    x.UsingInMemory();
+    x.AddSagaStateMachine<OfferStateMachine, OfferState>().InMemoryRepository();
+    /*.EntityFrameworkRepository(r =>
+    {
+        r.ConcurrencyMode = ConcurrencyMode.Pessimistic;
+
+        r.AddDbContext<DbContext, OfferStateContext>((provider, builder) =>
+        {
+            builder.UseSqlServer(sqlConnectionString, m =>
+            {
+                m.MigrationsAssembly(Assembly.GetExecutingAssembly().GetName().Name);
+                m.MigrationsHistoryTable($"__{nameof(OfferStateContext)}");
+            });
+        });
+    });*/
+});
 
 var app = builder.Build();
 

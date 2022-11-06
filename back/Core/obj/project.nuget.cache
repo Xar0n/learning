@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ODF4ehteIGRFSmGE3rQnjfYHjP+TaGGxl31OFtJDoMYemSFBFEBTujn/4uxf/dKEYNCyyE9uVM1Pw+uk4cokOQ==",
+  "dgSpecHash": "GVd1ohxJwGPQ6b9r0vFM8P2o7OZ1PymrVPzZSUgJMJOFCJGM5oBDbTcqwMAHDOeDHw0cJEQuZimpS7CcGzgpXw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\эльдо\\source\\repos\\LearningAPI\\Core\\Core.csproj",
+  "projectFilePath": "D:\\Projects\\C#\\LearningAPI\\Core\\Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
